@@ -13,4 +13,4 @@ let squareEyes = fetch("https://api.noroff.dev/api/v1/square-eyes")
             <img src="${movies[i].image}">
             </div>`
         }
-    });
+    }); 
