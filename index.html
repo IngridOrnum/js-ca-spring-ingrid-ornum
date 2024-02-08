@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Square Eyes</title>
     <link href="css/header-and-footer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/eaf3f254a9.js"></script>
 </head>
 <header class="header-square-eyes">
     <div class="logo-and-nav-links">
@@ -20,11 +23,11 @@
                 <li>
                     <div class="line-divider-header"></div>
                 </li>
-                <li><a class="nav-text" href="categories-page.html">Film Categories</a></li>
+                <li><a class="nav-text" href="movie-categories.html">Film Categories</a></li>
                 <li>
                     <div class="line-divider-header"></div>
                 </li>
-                <li><a class="nav-text" href="categories-page.html">My Watchlist</a></li>
+                <li><a class="nav-text" href="movie-categories.html">My Watchlist</a></li>
                 <li>
                     <div class="line-divider-header"></div>
                 </li>
@@ -40,8 +43,6 @@
                             </svg>
                         </div>
                         <div class="dropdown-content">
-                            <a href="#">Sale</a>
-                            <a href="contact-page.html">Contact</a>
                             <a href="about-us.html">About</a>
                         </div>
                     </div>
@@ -49,7 +50,7 @@
             </ul>
         </nav>
     </div>
-    <div role="navigation" class="header-account-burger-mobile">
+    <div class="header-account-burger-mobile" role="navigation">
         <!--      nav my account icon -->
         <div class="header-icons-mobile">
             <svg fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -70,8 +71,6 @@
                 <a href="movie-categories.html">Film Categories</a>
                 <a href="movie-categories.html">My Watchlist</a>
                 <a href="about-us.html">About Us</a>
-                <a href="contact-page.html">Contact</a>
-                <a href="movie-categories.html">Sale</a>
             </div>
         </div>
     </div>
@@ -87,6 +86,37 @@
     </div>
 </header>
 <body>
+    <main>
+        <section class="hero-carousel-homepage" aria-label="Popular Movies">
+            <div class="carousel">
+                <ul data-slides>
+                <li class="carousel-item" data-active>
+                    <img src="https://images.unsplash.com/photo-1707090804669-72f8a7f3348e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="movie-cover" class="movie-image"/>
+                    <h2 class="movie-title"></h2>
+                    <p class="p-text p-carousel-text">
+                        <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+                        <!--                dolore magna aliqua.-->
+                    </p>
+                </li>
+                <li class="carousel-item" data-carousel>
+                    <img src="https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="movie-cover" class="movie-image"/>
+                    <h2 class="movie-title"></h2>
+                    <p class="p-text p-carousel-text"></p>
+                </li>
+                <li class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1515859005217-8a1f08870f59?q=80&w=2010&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="movie-cover" class="movie-image"/>
+                    <h2 class="movie-title"></h2>
+                    <p class="p-text p-carousel-text"></p>
+                </li>
+                </ul>
+            </div>
+        </section>
+        <button><a href="cart.html">Buy Now</a></button>
+        <button><a href="movie-page.html">More info</a></button>
+        <div class="carousel-btn btn-prev" data-carousel-butto="prev"><i class="fa-solid fa-chevron-left fa-xl"></i></div>
+        <div class="carousel-btn btn-next" data-carousel-button="next"><i class="fa-solid fa-chevron-right fa-xl"></i></div>
+        <div class="dots"></div>
+    </main>
 
 </body>
 </html>
