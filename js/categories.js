@@ -16,8 +16,8 @@ let squareEyes = fetch("https://api.noroff.dev/api/v1/square-eyes")
     });
 
 
-function loadMovieGenre() {
-    for (const movie of squareEyes) {
-        const genreOption = document.createElement("option");
-
-    }}
+// function loadMovieGenre() {
+//     for (const movie of squareEyes) {
+//         const genreOption = document.createElement("option");
+//
+//     }}

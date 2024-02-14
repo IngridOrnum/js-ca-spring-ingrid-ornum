@@ -17,55 +17,21 @@ buttons.forEach(button => {
     })
 })
 
+let movieContainer = document.querySelector(".movie-container");
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let carousel = document.querySelector(".carousel");
-//     let carouselItem = carousel.querySelectorAll(".carousel-item");
-//     let dotsContainer = document.querySelector(".dots");
-//
-//     // Insert dots into the DOM
-//     carouselItem.forEach((_, index) => {
-//         let dot = document.createElement("span");
-//         dot.classList.add("dot");
-//         if (index === 0) dot.classList.add("active");
-//         dot.dataset.index = index;
-//         dotsContainer.appendChild(dot);
-//     });
-//
-//     let dots = document.querySelectorAll(".dot");
-//
-//     // Function to show a specific item
-//     function showCarouselItem(index) {
-//         carouselItem.forEach((item, idx) => {
-//             carouselItem.classList.remove("active");
-//             dots[idx].classList.remove("active");
-//             if (idx === index) {
-//                 carouselItem.classList.add("active");
-//                 dots[idx].classList.add("active");
-//             }
-//         });
-//     }
-//
-//     // Event listeners for buttons
-//     document.querySelector(".btn-prev").addEventListener("click", () => {
-//         let index = [...carouselItem].findIndex((carouselItem) =>
-//             carouselItem.classList.contains("active")
-//         );
-//         showItem((index - 1 + carouselItem.length) % carouselItem.length);
-//     });
-//
-//     document.querySelector(".btn-next").addEventListener("click", () => {
-//         let index = [...carouselItem].findIndex((item) =>
-//             item.classList.contains("active")
-//         );
-//         showCarouselItem((index + 1) % carouselItem.length);
-//     });
-//
-//     // Event listeners for dots
-//     dots.forEach((dot) => {
-//         dot.addEventListener("click", () => {
-//             let index = parseInt(dot.dataset.index);
-//             showItem(index);
-//         });
-//     });
-// });
+
+let squareEyes = fetch("https://api.noroff.dev/api/v1/square-eyes")
+    .then(function (getResponse) {
+        return getResponse.json();
+    })
+    .then(result => {
+        let movies = result;
+        for(var i = 0; i < movies.length; i++){
+            movieContainer.innerHTML += `
+            <div> 
+            <img alt="movie cover" src="${movies[i].image}"/>
+            <h2>${movies[i].title}</h2>
+            <span>${movies[i].released}</span>
+            </div>`
+        }
+    });

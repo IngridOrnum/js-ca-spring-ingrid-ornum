@@ -9,7 +9,7 @@ body {
 .carousel {
     position: relative;
     width: 100vw;
-    height: 800px;
+    height: 50vh;
 }
 
 .carousel > ul {
@@ -42,7 +42,7 @@ body {
     position: absolute;
     background-color: #d9d9d960;
     border: 1px solid #d3d3d3;
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 4px;
     top: 50%;
     z-index: 10;
@@ -68,3 +68,48 @@ body {
 /*    justify-content: center;*/
 /*    gap: 12px;*/
 /*}*/
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.movie-container img {
+    width: 160px;
+    height: 224px;
+    border-radius: 0.5rem;
+}
+
+.movie-container h2 {
+    width: 160px;
+    font-size: 20px;
+}
+
+
+
+/* Extra Small (xs) */
+@media (min-width: 470px) {
+
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+
+
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+    .carousel-button {
+        padding: 1rem;
+    }
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+
+
+}
