@@ -1,6 +1,8 @@
 // hero slides
 
-const buttons = document.querySelectorAll("[data-carousel-button]")
+const buttons = document.querySelectorAll("[data-carousel-button]");
+const filterSelect = document.querySelector('#filter-select');
+let movieContainer = document.querySelector(".movie-container");
 
 
 buttons.forEach(button => {
@@ -20,79 +22,70 @@ buttons.forEach(button => {
     })
 })
 
-// filter function
+// fetch movies
 
-async function fetchMovieGenres() {
-    try {
-        const response = await fetch("https://api.noroff.dev/api/v1/square-eyes");
-        const moviesData = await response.json();
-        const movieGenres = moviesData.map(movie => movie.genre);
-
-        const removeMultipleGenres = [...new Set(movieGenres)];
-
-        removeMultipleGenres.forEach(genre => {
-            const filterDropdown = document.getElementById("filter-select");
-            filterDropdown.value = genre.toLowerCase();
-            filterDropdown.textContent = genre;
-            filterSelect.appendChild(option);
-        });
-
-        filterSelect.addEventListener('change', () => {
-            const selectGenre = filterSelect.value.toLowerCase();
-            const filteredMovies = movieGenres.filter(movie => movie.genre.toLowerCase() === selectGenre || selectGenre === 'default');
-
-            renderMovies(filteredMovies);
-        });
-    } catch (error) {
-        console.error('Error fetching movie genres:', error);
-    }
-}
-
-function renderMovies(movies) {
-    moviesList.innerHTML = ''; // clear previous movie list
-
-    movies.forEach(movie => {
-        const movieElement = document.createElement('div');
-        movieElement.classList.add('movie');
-
-        // Movie cover (image)
-        const image = document.createElement('img');
-        image.src = movie.cover;
-        image.alt = movie.title;
-        movieElement.appendChild(image);
-
-        // Movie title
-        const titleElement = document.createElement('p');
-        titleElement.textContent = movie.title;
-        movieElement.appendChild(titleElement);
-
-        // Release year
-        const releaseYearElement = document.createElement('p');
-        releaseYearElement.textContent = `Release Year: ${movie.releaseYear}`;
-        movieElement.appendChild(releaseYearElement);
-
-        moviesList.appendChild(movieElement);
-    })
-}
-
-fetchMovieGenres();
-
-//movie cards
-
-let movieContainer = document.querySelector(".movie-container");
-
-let squareEyes = fetch("https://api.noroff.dev/api/v1/square-eyes")
-    .then(function (getResponse) {
-        return getResponse.json();
-    })
-    .then(result => {
-        let movies = result;
-        for (var i = 0; i < movies.length; i++) {
-            movieContainer.innerHTML += `
-            <div>
+function fetchAllMovies() {
+    fetch("https://api.noroff.dev/api/v1/square-eyes")
+        .then(function (getResponse) {
+            return getResponse.json();
+        })
+        .then(result => {
+            let movies = result;
+            let genreArray = [];
+            movieContainer.innerHTML = "";
+            filterSelect.innerHTML = " <option selected>View all movies</option>";
+            for (let i = 0; i < movies.length; i++) {
+                movieContainer.innerHTML += `
+            <a href="movie-page.html?id=${movies[i].id}">
             <img alt="movie cover" src="${movies[i].image}"/>
             <h2>${movies[i].title}</h2>
             <span>${movies[i].released}</span>
-            </div>`
-        }
-    });
+            </a>`
+
+                if (!genreArray.includes(movies[i].genre)) (
+                    genreArray.push(movies[i].genre)
+                );
+            }
+            for (let i = 0; i < genreArray.length; i++) {
+                filterSelect.innerHTML += `
+                <option>${genreArray[i]}</option>`
+            }
+        })
+}
+
+fetchAllMovies();
+
+function filterMovies(filterParameter) {
+    fetch("https://api.noroff.dev/api/v1/square-eyes")
+        .then(function (getResponse) {
+            return getResponse.json();
+        })
+        .then(result => {
+            let movies = result;
+            movieContainer.innerHTML = ``;
+            console.log(filterParameter)
+            for (let i = 0; i < movies.length; i++) {
+                if (movies[i].genre === filterParameter) {
+                    movieContainer.innerHTML += `
+            <a href="movie-page.html?id=${movies[i].id}">
+            <img alt="movie cover" src="${movies[i].image}"/>
+            <h2>${movies[i].title}</h2>
+            <span>${movies[i].released}</span>
+            </a>`
+                }
+            }
+        })
+}
+
+filterSelect.addEventListener('change', function() {
+    console.log(filterSelect.value);
+    if (filterSelect.value === "View all movies") {
+        fetchAllMovies();
+    } else {
+        filterMovies(filterSelect.value);
+    }
+})
+
+
+// Open movie page in new window
+
