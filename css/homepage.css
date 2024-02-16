@@ -69,11 +69,28 @@ body {
 /*    gap: 12px;*/
 /*}*/
 
+#filter-container {
+    display: flex;
+    gap: 1rem;
+}
+
+#filter-btn, #filter-select {
+   padding: .5rem;
+    font-size: 16px;
+}
+
 .movie-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.movie-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .movie-container img {
@@ -87,6 +104,27 @@ body {
     font-size: 20px;
 }
 
+.movie-container span {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+/*.box {*/
+/*    min-width: 200px;*/
+/*    min-height: 224px;*/
+/*    border-radius: 0.5rem;*/
+/*     background-color: #FFFFFF;*/
+/*}*/
+
+/*.box-container {*/
+/*      display: flex;*/
+/*      justify-content: space-between;*/
+/*      flex-wrap: wrap;*/
+/*      gap: 1rem;*/
+/*      margin-top: 2rem;*/
+/*      width: auto;*/
+/*}*/
+
 
 
 /* Extra Small (xs) */
@@ -96,20 +134,22 @@ body {
 
 /* Medium (md) */
 @media (min-width: 768px) {
-
+   .carousel-button {
+       padding: 1rem;
+   }
 
 }
 
 /* Large (lg) */
 @media (min-width: 1024px) {
-    .carousel-button {
-        padding: 1rem;
-    }
+
 
 }
 
 /* Extra Large (xl) */
 @media (min-width: 1280px) {
+
+
 
 
 }
