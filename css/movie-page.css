@@ -1,0 +1,351 @@
+
+    .main-movie-page {
+        margin: 0 16px;
+    }
+
+    .movie-section {
+        margin-top: 72px;
+        margin-bottom: 42px;
+    }
+
+    .movie-page-bg-img {
+        /*background-image: url("../assets/images/moviepage/dungeons-and-dragons-mobile.png");*/
+        background-size: 100%;
+        height: 500px;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        background-repeat: no-repeat;
+        top: 76px;
+    }
+
+    #img-cover-mobile {
+        width: 116px;
+        height: auto;
+        border-radius: 8px;
+        position: absolute;
+        right: 16px;
+        top: 156px;
+    }
+
+    #img-cover-desktop {
+        display: none;
+    }
+
+    .movie-details {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-top: 22px;
+        padding-bottom: 28px;
+        font-weight: 300;
+    }
+
+    .imbd-rating {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .movie-description {
+        font-weight: 300;
+        line-height: 180%;
+        margin-bottom: 42px;
+    }
+
+    #movie-page-carousel-heading {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .movie-page-carousel {
+        padding-bottom: 62px;
+    }
+
+    #dd-heading {
+        font-size: 26px;
+        font-weight: 400;
+        align-self: flex-end;
+        margin-top: 162px;
+        width: 284px;
+    }
+
+    #button-more-mobile {
+        width: 58px;
+        height: 23px;
+        background-color: var(--primary);
+        border-radius: 4px;
+        border: 1px solid #959595;
+        color: #BABABA;
+        margin-left: 0.5rem;
+        cursor: pointer;
+    }
+
+    #button-more-mobile:hover {
+        background-color: #FFFFFF50;
+        color: #ffffff;
+        border: none;
+    }
+
+    .grid-container-directors-actors-etc {
+        display: none;
+    }
+
+    .buttons-action-moviepage-mobile, .buttons-action-moviepage-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #button-buy, .button-watchlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 8px;
+        height: 64px;
+        font-size: 24px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+    }
+
+    #button-buy {
+        background-color: var(--secondary);
+    }
+
+    #button-buy:hover, .button-watchlist:hover {
+        background-color: #FFD568;
+    }
+
+    .button-watchlist {
+        background-color: #FFE194;
+    }
+
+    .buttons-action-moviepage-desktop {
+        display: none;
+    }
+
+
+/* Small (sm) */
+@media (min-width: 640px) {
+
+    .movie-section {
+        margin-bottom: 0;
+    }
+
+    .movie-page-bg-img {
+        /*background-image: url("../assets/images/moviepage/dungeons-and-dragons-desktop.png");*/
+        background-size: 100%;
+        height: 500px;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+
+    #button-more-mobile {
+        display: none;
+    }
+
+    #dd-heading {
+        margin-top: 120px;
+    }
+
+    .movie-description {
+        margin-bottom: 1rem;
+        width: 400px;
+    }
+
+    .grid-container-directors-actors-etc {
+        display: grid;
+        grid-template-columns: 78px 368px;
+        padding-bottom: 44px;
+    }
+
+    .grid-item {
+        padding: 8px;
+        font-size: 14px;
+        text-align: left;
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+    .grid-item-bold {
+        font-weight: 400;
+        padding-left: 0;
+    }
+
+    #img-cover-mobile {
+        display: none;
+    }
+
+    #img-cover-desktop {
+        display: flex;
+        height: auto;
+        width: 185px;
+        margin-bottom: 10px;
+        border-radius: .5rem;
+        margin-top: 40px;
+    }
+
+    .buttons-action-moviepage-mobile {
+        display: none;
+    }
+
+    .buttons-action-moviepage-desktop {
+        display: flex;
+    }
+
+    #button-buy, .button-watchlist {
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .movie-cover-and-buttons-desktop {
+        position: absolute;
+        right: 1rem;
+        top: 150px;
+    }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+
+
+    #dd-heading, .movie-description {
+        width: 542px;
+    }
+
+    .grid-container-directors-actors-etc {
+        margin-bottom: 88px;
+        padding: 0;
+    }
+
+    #dd-heading {
+        margin-top: 180px;
+        padding: 0;
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 882px) {
+
+    .main-movie-page {
+        margin: 0 56px;
+    }
+
+    #img-cover-desktop {
+        margin-right: 42px;
+    }
+
+    .buttons-action-moviepage-desktop {
+        width: 185px;
+
+    }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+
+    #img-cover-desktop {
+        height: auto;
+        width: 220px;
+    }
+
+    .buttons-action-moviepage-desktop {
+        width: 220px;
+    }
+
+    .movie-description {
+        width: 622px;
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    .grid-container-directors-actors-etc {
+        padding: 0;
+    }
+
+    #dd-heading {
+        font-size: 32px;
+        margin-top: 224px;
+        width: 662px;
+    }
+
+    .grid-item {
+        font-size: 14px;
+        width: 622px;
+    }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+
+    .main-movie-page {
+        margin: 0 78px;
+    }
+
+    #dd-heading {
+        margin-top: 298px;
+    }
+
+    .movie-description {
+        padding: 22px 0;
+    }
+
+    #img-cover-desktop {
+        height: auto;
+        width: 269px;
+        margin-right: 62px;
+        margin-top: 86px;
+    }
+
+    .buttons-action-moviepage-desktop {
+        width: 269px;
+    }
+}
+
+/* 2XL (2xl) */
+@media (min-width: 1536px) {
+
+    .main-movie-page {
+        margin: 0 160px;
+    }
+
+    #dd-heading {
+        margin-top: 360px;
+        font-size: 38px;
+        width: 780px;
+    }
+
+    .movie-description {
+        font-size: 20px;
+        width: 780px;
+    }
+
+    .movie-details {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    #img-cover-desktop {
+        height: auto;
+        width: 360px;
+        margin-right: 144px;
+        margin-top: 86px;
+    }
+
+    .buttons-action-moviepage-desktop {
+        width: 360px;
+    }
+
+    .grid-item {
+        font-size: 1rem;
+    }
+
+    .grid-container-directors-actors-etc {
+        margin-bottom: 180px;
+    }
+}
