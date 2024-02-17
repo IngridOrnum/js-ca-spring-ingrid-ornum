@@ -282,6 +282,10 @@ footer {
         display: none;
     }
 
+    .cart-text {
+        margin-left: 6px;
+    }
+
     .my-account-desktop {
         display: flex;
         justify-content: center;
@@ -303,16 +307,16 @@ footer {
         gap: 20px;
     }
 
-    .nav-text {
+    .nav-text, .fa-cart-shopping {
         text-decoration: none;
         color: #FFFFFF;
     }
 
-    .nav-text, .header-account-desktop {
+    .nav-text, .header-account-desktop, .shopping-cart-desktop {
         cursor: pointer;
     }
 
-    .nav-text:hover, .header-account-desktop:hover {
+    .nav-text:hover, .header-account-desktop:hover, .cart-text:hover {
         color: var(--secondary)
     }
 
