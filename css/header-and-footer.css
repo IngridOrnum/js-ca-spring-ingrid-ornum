@@ -57,6 +57,18 @@
     display: block;
 }
 
+#cart-dropdown-mobile {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+
 /* FOOTER */
 
 .list {
@@ -274,6 +286,16 @@ footer {
         margin-bottom: 42px;
     }
 
+    #cart-dropdown-mobile {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #FFFFFF;
+    }
 }
 
 /* Large (lg) */
@@ -284,6 +306,17 @@ footer {
 
     .cart-text {
         margin-left: 6px;
+    }
+
+    #cart-dropdown-desktop {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #FFFFFF;
     }
 
     .my-account-desktop {
