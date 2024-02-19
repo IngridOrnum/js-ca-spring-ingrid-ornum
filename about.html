@@ -33,20 +33,23 @@
         </div>
         <div class="header-account-burger-mobile" role="navigation">
             <!--      nav my account icon -->
-            
-            <div id="cart-icon">
-                <a class="nav-text" href="cart.html">
-                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
-                </a>
+            <div>
+                <button class="nav-text cart-button" id="cart-button-mobile" onclick="cartDropdownMobile()">
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                </button>
+                <div id="cart-dropdown-mobile">
+                    <button id="close-btn-mobile">
+                        <i class="fa-solid fa-x fa-xl"></i>
+                        <span class="text-close-btn">Close</span>
+                    </button>
+                </div>
             </div>
-            <div id="cart-dropdown-mobile"></div>
             <a class="nav-text" href="my-account.html">
                 <svg fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 4C11.93 4 13.5 5.57 13.5 7.5C13.5 9.43 11.93 11 10 11C8.07 11 6.5 9.43 6.5 7.5C6.5 5.57 8.07 4 10 4ZM10 18C7.97 18 5.57 17.18 3.86 15.12C5.55 13.8 7.68 13 10 13C12.32 13 14.45 13.8 16.14 15.12C14.43 17.18 12.03 18 10 18Z"
                           fill="white"/>
                 </svg>
             </a>
-            
             <!--      nav burger menu icon -->
             <div class="dropdown-menu-mobile">
                 <div class="header-icons-mobile dropdown-btn-mobile">
@@ -63,11 +66,16 @@
             </div>
         </div>
         <div class="my-account-desktop">
-            <a class="shopping-cart-desktop" href="cart.html">
-                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <button id="cart-button-desktop" class="shopping-cart-desktop cart-button" onclick="cartDropdownDesktop()">
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
                 <span class="cart-text nav-text">Cart</span>
-            </a>
-            <div id="cart-dropdown-desktop"></div>
+            </button>
+            <div class="cart-dropdown" id="cart-dropdown-desktop">
+                <button id="close-btn-desktop">
+                    <i class="fa-solid fa-x fa-xl"></i>
+                    <span class="text-close-btn">Close</span>
+                </button>
+            </div>
             <div class="line-divider-header"></div>
             <a class="header-account-desktop nav-text" href="my-account.html">
                 <svg fill="none" height="30" viewBox="0 0 30 30" width="30" xmlns="http://www.w3.org/2000/svg">

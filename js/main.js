@@ -1,5 +1,3 @@
-// hero slides
-
 const buttons = document.querySelectorAll("[data-carousel-button]");
 const filterSelect = document.querySelector('#filter-select');
 let movieContainer = document.querySelector(".movie-container");
@@ -78,7 +76,6 @@ function filterMovies(filterParameter) {
 }
 
 filterSelect.addEventListener('change', function() {
-    console.log(filterSelect.value);
     if (filterSelect.value === "View all movies") {
         fetchAllMovies();
     } else {
@@ -86,6 +83,4 @@ filterSelect.addEventListener('change', function() {
     }
 })
 
-
-// Open movie page in new window
 

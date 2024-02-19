@@ -60,12 +60,36 @@
 #cart-dropdown-mobile {
     display: none;
     position: absolute;
-    z-index: 100;
-    top: 0;
+    z-index: 20;
+    top: 76px;
     right: 0;
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
+    color: #131313;
+}
+
+#cart-button-mobile {
+    cursor: pointer;
+    border-style: none;
+    color: #FFFFFF;
+    background: none;
+}
+
+#close-btn-mobile {
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.text-close-btn {
+    font-size: 20px;
+    margin-left: .5rem;
 }
 
 
@@ -286,16 +310,6 @@ footer {
         margin-bottom: 42px;
     }
 
-    #cart-dropdown-mobile {
-        display: none;
-        position: absolute;
-        z-index: 100;
-        right: 0;
-        top: 0;
-        width: 50vw;
-        height: 100vh;
-        background-color: #FFFFFF;
-    }
 }
 
 /* Large (lg) */
@@ -308,15 +322,40 @@ footer {
         margin-left: 6px;
     }
 
+    #cart-button-desktop {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .cart-text {
+        font-size: 20px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+    }
+
     #cart-dropdown-desktop {
         display: none;
         position: absolute;
         z-index: 100;
         right: 0;
-        top: 0;
+        top: 76px;
         width: 50vw;
         height: 100vh;
         background-color: #FFFFFF;
+    }
+
+    #close-btn-desktop {
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        background: none;
+        display: flex;
+        align-items: center;
     }
 
     .my-account-desktop {
@@ -364,10 +403,6 @@ footer {
         justify-content: center;
         gap: 0.5rem;
     }
-}
-
-/* Extra Large (xl) */
-@media (min-width: 1280px) {
 
     .nav-links, .dropdown-btn, .my-account-desktop {
         font-size: 20px;
@@ -377,9 +412,5 @@ footer {
         padding-left: 24px;
         padding-right: 24px;
     }
-}
 
-/* 2XL (2xl) */
-@media (min-width: 1536px) {
-    /* Your styles for the 2XL breakpoint here */
 }
