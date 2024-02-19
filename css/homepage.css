@@ -109,24 +109,6 @@ body {
     font-weight: lighter;
 }
 
-/*.box {*/
-/*    min-width: 200px;*/
-/*    min-height: 224px;*/
-/*    border-radius: 0.5rem;*/
-/*     background-color: #FFFFFF;*/
-/*}*/
-
-/*.box-container {*/
-/*      display: flex;*/
-/*      justify-content: space-between;*/
-/*      flex-wrap: wrap;*/
-/*      gap: 1rem;*/
-/*      margin-top: 2rem;*/
-/*      width: auto;*/
-/*}*/
-
-
-
 /* Extra Small (xs) */
 @media (min-width: 470px) {
 

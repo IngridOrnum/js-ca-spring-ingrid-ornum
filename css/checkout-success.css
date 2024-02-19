@@ -1,0 +1,52 @@
+
+.container-checkout-success {
+    margin: 10% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heading-checkout-success {
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.text-checkout-success {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.button-checkout-success {
+    width: 300px;
+    height: 80px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-checkout-success a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.button-checkout-success:hover {
+    background-color: #FFD568;
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+    .container-checkout-success {
+        gap: 62px
+    }
+    .heading-checkout-success {
+        font-size: 42px;
+    }
+
+    .text-checkout-success {
+        font-size: 22px;
+    }
+}
