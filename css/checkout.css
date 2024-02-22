@@ -1,0 +1,83 @@
+
+.cart-details-and-paymentform {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+    margin-top: 120px;
+}
+
+#your-cart-title, #empty-checkout-text {
+    font-weight: 300;
+}
+
+#line-divider-cart-h2 {
+    height: 2px;
+    width: 200px;
+    background-color: #FFD568;
+    margin-bottom: 24px;
+    margin-top: .5rem;
+}
+
+.form-payment {
+    width: 330px;
+}
+
+.payment-form-colum {
+    margin-bottom: 12px;
+}
+
+#payment-method {
+    height: 57px;
+    width: 330px;
+    padding: 16px 20px;
+    border-radius: .5rem;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #BCBCBC;
+    background-color: #4B4B4B;
+    margin-bottom: 12px;
+}
+
+input[type=text] {
+    height: 57px;
+    width: 330px;
+    padding: 16px 20px;
+    border-radius: .5rem;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #4B4B4B;
+    background-color: #BCBCBC;
+}
+
+#expmonth {
+    width: 194px;
+}
+
+#cvc {
+    width: 123px;
+}
+
+.exp-cvc {
+    display: flex;
+    justify-content: space-between;
+}
+
+button[type=submit] {
+    background-color: var(--secondary);
+    color: #000000;
+    width: 330px;
+    height: 57px;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+button[type=submit]:hover {
+    background-color: #FFD568;
+}

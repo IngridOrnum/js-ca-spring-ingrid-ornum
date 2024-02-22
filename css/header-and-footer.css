@@ -7,6 +7,229 @@
 }
 
 .line-divider-header {
+    display: none;
+}
+
+.nav-links {
+    display: none;
+}
+
+.mobile-nav-text {
+    display: none;
+}
+
+.nav-text, .fa-cart-shopping {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav-text, .header-account-desktop, .shopping-cart-desktop {
+    cursor: pointer;
+}
+
+.nav-text:hover, .header-account-desktop:hover, .cart-text:hover {
+    color: var(--secondary)
+}
+
+.my-account-desktop, .nav-links {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.my-account-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-account-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-links, .dropdown-btn, .my-account-desktop {
+    font-size: 20px;
+}
+
+.header-square-eyes {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#cart-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 76px;
+    width: 500px;
+    min-height: 600px;
+    padding: 0 2rem;
+    background-color: #FFFFFF;
+    border-radius: 0 0 0 1rem;
+    box-shadow: 2px -2px 20px 4px #1C1C1C;
+}
+
+.cart-text, .cart-dropdown-text {
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    color: #131313;
+}
+
+#movie-info {
+    display: flex;
+    color: #131313;
+}
+
+#movie-div-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-and-price-movie-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed-to-checkout-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 8px;
+        height: 64px;
+        font-size: 20px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+    background-color: #FFD568;
+    margin-top: 2rem;
+}
+
+.proceed-to-checkout-btn:hover {
+    background-color: #FFE194;
+}
+
+#cart-close-btn {
+    border: none;
+    right: 2rem;
+    top: 2rem;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background: #FFE194;
+    height: 35px;
+    width: 35px;
+}
+
+#cart-close-btn:hover {
+    background-color: #FFD568;
+}
+
+.movie-title {
+    font-weight: 400;
+}
+
+.movie-title, .movie-price {
+    margin-left: 1rem;
+}
+
+.movie-div-cart {
+    display: flex;
+    color: #131313;
+}
+
+.movie-cover-cart {
+        width: 160px;
+        height: 224px;
+        border-radius: 0.5rem;
+}
+
+.trash-remove-btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background: #FFE194;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.trash-remove-btn-cart:hover {
+    background-color: #FFD568;
+}
+
+.fa-trash {
+    pointer-events: none;
+}
+
+
+.sum-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.sum {
+    color: #131313;
+    font-weight: 400;
+}
+
+#sumTotal {
+    color: #131313;
+}
+
+.div-cart-title {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.line-divider-cart {
+    height: 2px;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #FFD568;
+}
+
+.text-cart-title {
+    font-weight: 400;
+}
+
+#empty-cart-text {
+    color: #131313;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+#div-wrapper-products-cart {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#cart-button-desktop {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.line-divider-header {
     background-color: var(--secondary);
     width: 1px;
     height: 18px;
@@ -56,6 +279,12 @@
 .dropdown-menu:hover .dropdown-content {
     display: block;
 }
+
+.text-close-btn {
+    font-size: 20px;
+    margin-left: .5rem;
+}
+
 
 /* FOOTER */
 
@@ -148,14 +377,14 @@ footer {
     padding-top: 68px;
 }
 
-.line-divider {
-    background-color: #666666;
-    height: 1px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*.line-divider {*/
+/*    background-color: #666666;*/
+/*    height: 1px;*/
+/*    width: auto;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
 
 /* Extra Extra Small (xxs) */
 @media (min-width: 430px) {
@@ -168,10 +397,6 @@ footer {
     .logo {
         width: 138px;
         height: auto;
-    }
-
-    .my-account-desktop, .nav-links {
-        display: none;
     }
 
     .header-account-burger-mobile {
@@ -278,19 +503,22 @@ footer {
 
 /* Large (lg) */
 @media (min-width: 1024px) {
-    .header-account-burger-mobile {
+
+    .line-divider-header {
+        display: block;
+    }
+
+    .mobile-nav-text {
+        display: block;
+        color: #FFFFFF;
+    }
+
+    .dropdown-menu-mobile {
         display: none;
     }
 
     .cart-text {
         margin-left: 6px;
-    }
-
-    .my-account-desktop {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
     }
 
     .logo-and-nav-links {
@@ -306,47 +534,4 @@ footer {
         list-style: none;
         gap: 20px;
     }
-
-    .nav-text, .fa-cart-shopping {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
-
-    .nav-text, .header-account-desktop, .shopping-cart-desktop {
-        cursor: pointer;
-    }
-
-    .nav-text:hover, .header-account-desktop:hover, .cart-text:hover {
-        color: var(--secondary)
-    }
-
-    .my-account-desktop, .nav-links {
-        font-size: 1rem;
-        font-weight: 300;
-    }
-
-    .header-account-desktop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-}
-
-/* Extra Large (xl) */
-@media (min-width: 1280px) {
-
-    .nav-links, .dropdown-btn, .my-account-desktop {
-        font-size: 20px;
-    }
-
-    .header-square-eyes {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-}
-
-/* 2XL (2xl) */
-@media (min-width: 1536px) {
-    /* Your styles for the 2XL breakpoint here */
 }

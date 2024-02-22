@@ -1,8 +1,7 @@
-// hero slides
-
 const buttons = document.querySelectorAll("[data-carousel-button]");
 const filterSelect = document.querySelector('#filter-select');
 let movieContainer = document.querySelector(".movie-container");
+const loader = document.querySelector('.loader');
 
 
 buttons.forEach(button => {
@@ -25,6 +24,7 @@ buttons.forEach(button => {
 // fetch movies
 
 function fetchAllMovies() {
+    loader.style.display = "block";
     fetch("https://api.noroff.dev/api/v1/square-eyes")
         .then(function (getResponse) {
             return getResponse.json();
@@ -51,6 +51,7 @@ function fetchAllMovies() {
                 <option>${genreArray[i]}</option>`
             }
         })
+    loader.style.display = "none";
 }
 
 fetchAllMovies();
@@ -78,7 +79,6 @@ function filterMovies(filterParameter) {
 }
 
 filterSelect.addEventListener('change', function() {
-    console.log(filterSelect.value);
     if (filterSelect.value === "View all movies") {
         fetchAllMovies();
     } else {
@@ -86,6 +86,4 @@ filterSelect.addEventListener('change', function() {
     }
 })
 
-
-// Open movie page in new window
 
