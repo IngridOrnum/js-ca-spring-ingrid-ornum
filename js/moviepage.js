@@ -7,7 +7,7 @@ for (const parameter of searchParameter) {
     console.log(parameter)
 }
 
-// Add movie to watchlist
+// // Add movie to watchlist
 function addToWatchlist (movieId, movieTitle) {
     // retrieve existing watchlist or create a new one
     let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
@@ -39,6 +39,7 @@ function fetchSingleMovie() {
                 if (movies[i].id === movieId && movies[i].onSale === true) {
                     movieContainer.innerHTML = `
                         <section class="movie-section">
+                        <div class="movie-info-text">
             <h2 id="movie-heading">${movies[i].title}</h2>
             <div class="movie-details">
             <span>${movies[i].genre}</span>
@@ -50,6 +51,7 @@ function fetchSingleMovie() {
             <span>${movies[i].rating}</span>
             </span>
             </div>
+            <div id="movie-description">${movies[i].description}</div>
             <div class="movie-cover-and-buttons-desktop">
         <img alt="movie cover" id="img-cover-mobile" src="${movies[i].image}"/>
         <img alt="movie cover" id="img-cover-desktop" src="${movies[i].image}"/>
@@ -66,7 +68,6 @@ function fetchSingleMovie() {
             </button>
         </div>
     </div>
-            <div>${movies[i].description}</div>
             </section>
             `
                     found = true;
@@ -75,6 +76,7 @@ function fetchSingleMovie() {
                 if (movies[i].id === movieId && movies[i].onSale === false) {
                     movieContainer.innerHTML = `
             <section class="movie-section">
+            <div class="movie-info-text">
             <h2 id="movie-heading">${movies[i].title}</h2>
             <div class="movie-details">
             <span>${movies[i].genre}</span>
@@ -85,6 +87,8 @@ function fetchSingleMovie() {
             <i class="fa-brands fa-imdb fa-lg"></i>
             <span>${movies[i].rating}</span>
             </span>
+            </div>
+            <div id="movie-description">${movies[i].description}</div>
             </div>
             <div class="movie-cover-and-buttons-desktop">
         <img alt="movie cover" id="img-cover-mobile" src="${movies[i].image}"/>
@@ -101,7 +105,7 @@ function fetchSingleMovie() {
             </button>
         </div>
     </div>
-            <div>${movies[i].description}</div>
+            
             </section>`
                     found = true;
                     break;

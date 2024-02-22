@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+.loader {
+    color: #FFFFFF;
+}
+
 .carousel {
     position: relative;
     width: 100vw;

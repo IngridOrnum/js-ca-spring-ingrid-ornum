@@ -80,6 +80,41 @@
     color: #131313;
 }
 
+#movie-info {
+    display: flex;
+    color: #131313;
+}
+
+#movie-div-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-and-price-movie-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed-to-checkout-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 8px;
+        height: 64px;
+        font-size: 20px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+    background-color: #FFD568;
+    margin-top: 2rem;
+}
+
+.proceed-to-checkout-btn:hover {
+    background-color: #FFE194;
+}
+
 #cart-close-btn {
     border: none;
     right: 2rem;
@@ -98,8 +133,17 @@
     background-color: #FFD568;
 }
 
+.movie-title {
+    font-weight: 400;
+}
+
+.movie-title, .movie-price {
+    margin-left: 1rem;
+}
+
 .movie-div-cart {
     display: flex;
+    color: #131313;
 }
 
 .movie-cover-cart {
@@ -109,21 +153,40 @@
 }
 
 .trash-remove-btn-cart {
-    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background: #FFE194;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+}
 
+.trash-remove-btn-cart:hover {
+    background-color: #FFD568;
+}
+
+.fa-trash {
+    pointer-events: none;
 }
 
 
-#sum-cart {
+.sum-cart {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
 }
 
-#sum {
+.sum {
     color: #131313;
     font-weight: 400;
+}
+
+#sumTotal {
+    color: #131313;
 }
 
 .div-cart-title {
@@ -314,14 +377,14 @@ footer {
     padding-top: 68px;
 }
 
-.line-divider {
-    background-color: #666666;
-    height: 1px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*.line-divider {*/
+/*    background-color: #666666;*/
+/*    height: 1px;*/
+/*    width: auto;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
 
 /* Extra Extra Small (xxs) */
 @media (min-width: 430px) {

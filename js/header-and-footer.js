@@ -1,37 +1,36 @@
 const cartDropdownContent = document.getElementById('cart-dropdown');
 const closeCartBtn = document.getElementById('cart-close-btn');
-const sumCart = document.getElementById('sum-js');
-
 
 // dropdown
-function cartDropdown(){
+function cartDropdown() {
     cartDropdownContent.style.display = "block";
 }
 
 // close dropdown
-
 closeCartBtn.addEventListener("click", closeCartDropdown);
 
 function closeCartDropdown() {
     document.getElementById("cart-dropdown").style.display = "none";
 }
 
-
 // Add movie to cart
-function addToCart (movieId, movieTitle) {
+function addToCart(movieId, movieTitle) {
     // retrieve existing watchlist or create a new one
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Check if the movie is already in the watchlist
-    if(!cart.some(movie => movie.id === movieId)) {
-        // Add the movie to the watchlist
+    // Check if the movie is already in the cart
+    if (!cart.some(movie => movie.id === movieId)) {
+        // Add the movie to the cart
         cart.push({id: movieId, title: movieTitle});
 
-        // Store the updated watchlist back in localstorage
+        // Store the updated cart items back in localstorage
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        // Redirect to my my-watchlist.html
         alert('Movie added to your cart.')
+
+        displayInCart(); // update items in cart immediately
+        // updateEmptyCartText(cart); // update empty cart text immediately
+
     } else {
         alert('This movie is already added to cart.')
     }
@@ -40,60 +39,73 @@ function addToCart (movieId, movieTitle) {
 async function displayInCart() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let productsDiv = document.getElementById('products-div');
+    const sumTotalElement = document.getElementById('sumTotal');
+    const emptyCartText = document.getElementById('empty-cart-text');
+    let totalAmount = 0;
 
-    // Clear previous content
+    // Clear the productsDiv before adding new HTML
     productsDiv.innerHTML = '';
 
-    // Display each movie in the cart
-    for (const movie of cart) {
-        // Create a div element to contain the movie information
-        let movieDiv = document.createElement('div');
-        movieDiv.classList.add(".movie-div-cart")
+    // Array to hold promises for each API call
+    let fetchPromises = [];
 
+    // Create promises for each movie in the cart
+    for (const movie of cart) {
         try {
-            // fetch movie details
             const response = await fetch(`https://api.noroff.dev/api/v1/square-eyes/${movie.id}`);
             const data = await response.json();
 
-            // create image element
-            let imgElement = document.createElement('img');
-            imgElement.src = data.image;
-            imgElement.alt = data.title;
-            imgElement.classList.add(".movie-cover-cart");
+            // add the movie price to the total amount
+            totalAmount += parseFloat(data.price);
 
-            // create p element for the movie title
-            let titleElement = document.createElement('p');
-            titleElement.textContent = data.title;
+            // build the HTML string for each movie
+            const movieHTML = `
+                <div id="movie-div-cart">
+                    <div id="movie-info">
+                        <img class="movie-cover-cart" src="${data.image}" alt="${data.title}">
+                        <div class="movie-data">
+                            <div class="title-and-price-movie-cart">
+                                <span class="movie-title">${data.title}</span>
+                                <span class="movie-price">${data.price} NOK</span>
+                            </div>
+                        </div>
+                        <button class="trash-remove-btn-cart" data-index="${cart.indexOf(movie)}">
+                            <i class="fa-solid fa-trash fa-xl"></i>
+                        </button>
+                    </div>
+                    <div class="line-divider-cart"></div>
+                </div>`;
 
-            //create a remove button
-            let removeButton = document.createElement('button');
-            removeButton.innerHTML = "<i class=\"fa-solid fa-trash fa-lg\"></i>";
-            removeButton.classList.add(".trash-remove-btn-cart");
-
-            removeButton.addEventListener('click', function () {
-                // remove the movie from the cart
-                cart = cart.filter(item => item.id !== movie.id);
-
-                // update localstorage with the modified cart
-                localStorage.setItem('cart', JSON.stringify(cart));
-
-                // remove the movie div from the DOM
-                movieDiv.remove();
-            });
-
-            // append the image and title elements to the movie div
-            movieDiv.appendChild(imgElement);
-            movieDiv.appendChild(titleElement);
-            movieDiv.appendChild(removeButton);
-
-            // append the movie div to the movie element
-            productsDiv.appendChild(movieDiv);
-
+            productsDiv.innerHTML += movieHTML;
         } catch (error) {
             console.error('Failed to add movie to cart:', error);
         }
     }
+
+    // update total amount in the sumTotalElement
+    sumTotalElement.textContent = totalAmount.toFixed(2) + ' NOK';
+
+    // update empty cart text
+    emptyCartText.style.display = cart.length === 0 ? 'block' : 'none';
 }
 
-// Call displayWatchlist when the page loads
-window.onload = displayInCart();
+// Call displayInCart when the DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    displayInCart();
+
+});
+cartDropdownContent.addEventListener('click', (event) => {
+    if (event.target.classList.contains("trash-remove-btn-cart")) {
+        let index = event.target.dataset.index;
+        removeFromCart(index);
+    }
+})
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1); // Remove the item at the specified index
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayInCart();
+}
+
+
+
