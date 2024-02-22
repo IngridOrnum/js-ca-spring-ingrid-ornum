@@ -68,22 +68,30 @@ body {
 
 .movie-section {
     margin: 24px;
+    padding-bottom: 4rem;
 }
 
 #filter-container {
     display: flex;
+    align-items: center;
     gap: 1rem;
+}
+
+#filter-text {
+    font-family: Ubuntu, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 #filter-btn, #filter-select {
    padding: .5rem;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .movie-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     margin-top: 2rem;
 }
 
@@ -102,21 +110,15 @@ body {
 .movie-container h2 {
     width: 160px;
     font-size: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
-.movie-container span {
+.movie-container span{
     font-size: 20px;
     font-weight: lighter;
-}
-
-/* Extra Small (xs) */
-@media (min-width: 470px) {
-
-}
-
-/* Medium (md) */
-@media (min-width: 768px) {
-
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* Large (lg) */

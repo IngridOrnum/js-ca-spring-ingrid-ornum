@@ -1,12 +1,12 @@
 const cartDropdownContent = document.getElementById('cart-dropdown');
 const closeCartBtn = document.getElementById('cart-close-btn');
 
-// dropdown
+// dropdown cart
 function cartDropdown() {
     cartDropdownContent.style.display = "block";
 }
 
-// close dropdown
+// close dropdown cart
 closeCartBtn.addEventListener("click", closeCartDropdown);
 
 function closeCartDropdown() {
@@ -26,10 +26,7 @@ function addToCart(movieId, movieTitle) {
         // Store the updated cart items back in localstorage
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        alert('Movie added to your cart.')
-
         displayInCart(); // update items in cart immediately
-        // updateEmptyCartText(cart); // update empty cart text immediately
 
     } else {
         alert('This movie is already added to cart.')
