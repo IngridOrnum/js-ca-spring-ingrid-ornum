@@ -89,11 +89,19 @@
 #movie-info {
     display: flex;
     color: #131313;
+    margin-bottom: 1rem;
+}
+
+.movie-data {
+    display: flex;
+    gap: 2rem
 }
 
 #movie-div-cart {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
 }
 
 .title-and-price-movie-cart {
