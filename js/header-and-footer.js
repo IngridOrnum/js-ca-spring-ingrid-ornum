@@ -60,7 +60,6 @@ async function displayInCart() {
                 <div id="movie-div-cart">
                     <div id="movie-info">
                         <img class="movie-cover-cart" src="${data.image}" alt="${data.title}">
-                        
                         <div class="movie-data">
                             <div class="title-and-price-movie-cart">
                                 <span class="movie-title">${data.title}</span>

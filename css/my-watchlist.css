@@ -1,0 +1,36 @@
+
+main {
+    margin: 2rem;
+}
+
+#movieElement {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.movie-title-watchlist {
+    margin: 1rem 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.movie-cover {
+    width: 200px;
+    height: 280px;
+    border-radius: 0.5rem;
+}
+
+.watchlist-remove-btn {
+    padding: .5rem 1rem;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 300;
+    background-color: #FFE194;
+    cursor: pointer;
+    border-radius: .5rem;
+    border: none;
+}
+
+.watchlist-remove-btn:hover {
+    background-color: #FFD568;
+}
