@@ -84,9 +84,15 @@ The process of planning the project started in Notion and github board because I
 I used inspiration from a project I did earlier where we only used HTML and CSS, but did some adjustments to make it work with this assignment.
 
 ### Production process
-I used sourcetree to set up the project and create branches locally on my mac. While working on the code, I regularly committed changes and pushed to Github. When finished with a branch, I merged with the main branch and pulled the changes to the main branch locally on my computer using sourcetree. 
-
- 
+I used sourcetree to set up the project and create branches locally on my mac. While working on the code, I regularly committed changes and pushed to Github. When finished with a branch, I merged with the main branch and pulled the changes to the main branch locally on my computer using sourcetree.  
 
 ## Reflection
+I learned alot during this course assignment. I fount chatGPT to be a helpful tool, both with debugging code and understanding syntaxes more. I also worked alot at school where I had discussions with my peers, which was a big help during the assignment. I talked to my peers when I was stuck with a problem and I provided help to my peers with whatever I could.
 
+I tried different approaches to similar problems when coding with JS, like using innerhtml in the js to create html content versus using "createElement" method. 
+
+I am not too happy with the design on all the pages, but because the design part and making the site responsive wasn't a requirement I gave myeself some slack.
+
+My HTML files are not named the exact same as in the course assignment sheet we were provided to the project. I figured this would not be a problem as long as the content fulfill the requirements.
+
+After this course I understand JS more and feel more comfortable using it, but along the way I also figured what I need to study more to understand. 
