@@ -150,6 +150,7 @@ button[type=submit]:hover {
 @media (min-width: 1024px) {
     .cart-details-and-paymentform {
         flex-direction: row;
+        margin-bottom: 4rem;
     }
 
     .form-div {

@@ -29,7 +29,7 @@ async function displayWatchlist() {
 
 
             let removeButton = document.createElement('button');
-            removeButton.textContent = "Remove from watchlist";
+            removeButton.textContent = "Remove";
             removeButton.classList.add("watchlist-remove-btn");
 
             // event listener to remove button
