@@ -35,16 +35,17 @@ The semester project have the following requirements:
 
 Important features:   
 This list is a non-exhaustive list of important things to keep in mind before delivery:
-• Errors should be handled for the user, such that they are alerted when something
+
+* Errors should be handled for the user, such that they are alerted when something
 goes wrong like an API call.
-• A loading indicator should be shown to the user whenever they are waiting for an
+* A loading indicator should be shown to the user whenever they are waiting for an
 asynchronous action to finish.
-• There should be no hardcoded product data in your final submission.
-• Although the focus on marking is on JavaScript, the site still needs to be accessible
+* There should be no hardcoded product data in your final submission.
+* Although the focus on marking is on JavaScript, the site still needs to be accessible
 and usable for the user. If we cannot access functionality that has been coded, it will
 be marked as if the coding was not done.
-• Use `async` instead of `then` syntax for asynchronous actions.
-• Remove all console.log statements before delivery.
+* Use `async` instead of `then` syntax for asynchronous actions.
+* Remove all console.log statements before delivery.
 
 ## Features
 The project features seven responsive pages. These are the following:
