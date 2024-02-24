@@ -1,60 +1,55 @@
-/* Extra Small (xs) */
-@media (min-width: 470px) {
-
-    .about-us-content {
-        margin: 20px 54px 80px 54px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .top-nav {
-        color: #b3b3b3;
-        font-size: 14px;
-        font-weight: 300;
-        text-decoration: none;
-        display: flex;
-        gap: .5rem;
-        margin: .5rem 1rem;
-        cursor: pointer;
-    }
-
-    .heading-about-us {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 32px;
-        padding: 38px 0;
-    }
-
-    .line-divider-heading {
-        background-color: var(--secondary);
-        height: 32px;
-        width: 4px;
-    }
-
-    .p-about-us {
-        font-weight: 300;
-        font-size: 1rem;
-        line-height: 34px;
-        padding-bottom: 1rem;
-    }
-
-    .img-about-us {
-        width: 360px;
-        height: auto;
-        margin: 48px 0;
-    }
-
-    .about-us-text {
-        width: 392px;
-    }
+.about-us-content {
+    margin: 20px 54px 80px 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Small (sm) */
-@media (min-width: 640px) {
+.top-nav {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    display: flex;
+    gap: .5rem;
+    margin: .5rem 1rem;
+    cursor: pointer;
+}
 
+.heading-about-us {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 32px;
+    padding: 38px 0;
+}
+
+.line-divider-heading {
+    background-color: var(--secondary);
+    height: 32px;
+    width: 4px;
+}
+
+.p-about-us {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 34px;
+    padding-bottom: 1rem;
+}
+
+.img-about-us {
+    width: 360px;
+    height: auto;
+    margin: 48px 0;
+}
+
+.about-us-text {
+    width: 392px;
+}
+
+
+@media (min-width: 640px) {
     .img-about-us {
         width: 460px;
         height: auto;
@@ -62,12 +57,6 @@
     }
 }
 
-/* Medium (md) */
-@media (min-width: 768px) {
-    /* Your styles for the medium breakpoint here */
-}
-
-/* Large (lg) */
 @media (min-width: 1024px) {
     .about-us-content {
         margin: 20px 44px 94px 44px;
@@ -83,9 +72,7 @@
     }
 }
 
-/* Extra Large (xl) */
 @media (min-width: 1280px) {
-
     .img-about-us {
         width: 664px;
         height: auto;
@@ -97,9 +84,7 @@
     }
 }
 
-/* 2XL (2xl) */
 @media (min-width: 1536px) {
-
     .about-us-content {
         margin: 84px 84px 120px 84px;
     }

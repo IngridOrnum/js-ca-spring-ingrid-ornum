@@ -1,0 +1,51 @@
+main {
+    margin: 2rem;
+}
+
+.movie-div-watchlist {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#movieElement {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.movie-title-watchlist {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 300;
+    width: 200px;
+}
+
+.movie-cover {
+    width: 200px;
+    height: 280px;
+    border-radius: 0.5rem;
+}
+
+.watchlist-remove-btn {
+    padding: .5rem 1rem;
+    width: 200px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: #FFE194;
+    cursor: pointer;
+    border-radius: .5rem;
+    border: none;
+}
+
+.watchlist-remove-btn:hover {
+    background-color: #FFD568;
+}
+
+h1 {
+    font-size: 46px;
+    margin: 50px 0;
+}

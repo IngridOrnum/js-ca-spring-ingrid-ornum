@@ -65,10 +65,11 @@ async function displayInCart() {
                                 <span class="movie-title">${data.title}</span>
                                 <span class="movie-price">${data.price} NOK</span>
                             </div>
-                        </div>
+                        
                         <button class="trash-remove-btn-cart" data-index="${cart.indexOf(movie)}">
                             <i class="fa-solid fa-trash fa-xl"></i>
                         </button>
+                        </div>
                     </div>
                     <div class="line-divider-cart"></div>
                 </div>`;
@@ -89,7 +90,6 @@ async function displayInCart() {
 // Call displayInCart when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     displayInCart();
-
 });
 cartDropdownContent.addEventListener('click', (event) => {
     if (event.target.classList.contains("trash-remove-btn-cart")) {

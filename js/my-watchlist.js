@@ -9,6 +9,7 @@ async function displayWatchlist() {
     for (const movie of watchlist) {
         // Create a div element to contain the movie information
         let movieDiv = document.createElement('div');
+        movieDiv.classList.add("movie-div-watchlist");
 
         try {
             // fetch movie details
@@ -19,14 +20,30 @@ async function displayWatchlist() {
             let imgElement = document.createElement('img');
             imgElement.src = data.image;
             imgElement.alt = data.title;
-            imgElement.classList.add(".movieCover");
+            imgElement.classList.add("movie-cover");
 
             // create p element for the movie title
-            let titleElement = document.createElement('p');
+            let titleElement = document.createElement('h3');
             titleElement.textContent = data.title;
+            titleElement.classList.add("movie-title-watchlist");
+
 
             let removeButton = document.createElement('button');
-            removeButton.textContent = "Remove from watchlist";
+            removeButton.textContent = "Remove";
+            removeButton.classList.add("watchlist-remove-btn");
+
+            // event listener to remove button
+            removeButton.addEventListener('click', () => {
+                // remove movie from watchlist array
+                const index = watchlist.findIndex(item => item.id === movie.id);
+                if (index !== -1) {
+                    watchlist.splice(index, 1);
+                    // update local storage
+                    localStorage.setItem('watchlist', JSON.stringify(watchlist));
+                    // remove the movie div from the HTML
+                    movieDiv.remove();
+                }
+            });
 
             // append the image and title elements to the movie div
             movieDiv.appendChild(imgElement);
@@ -35,8 +52,6 @@ async function displayWatchlist() {
         } catch (error) {
             console.error('Error fetching movie details:', error);
         }
-
-
         // append the movie div to the movie element
         movieElement.appendChild(movieDiv);
     }
