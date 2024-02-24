@@ -8,7 +8,6 @@ async function displayCheckoutSum() {
    for (const movie of cartData) {
         const response = await fetch(`https://api.noroff.dev/api/v1/square-eyes/${movie.id}`);
         const data = await response.json();
-        console.log(movie);
 
         summaryHtml += `
         <div class="movie-item">

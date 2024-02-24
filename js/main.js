@@ -102,7 +102,6 @@ async function filterMovies(filterParameter) {
         const result = await getResponse.json();
         let movies = result;
         movieContainer.innerHTML = "";
-        console.log(filterParameter);
         for (let i = 0; i < movies.length; i++) {
             if (movies[i].genre === filterParameter) {
                 movieContainer.innerHTML += `

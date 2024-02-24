@@ -1,5 +1,4 @@
 /* HEADER */
-
 .header-square-eyes {
     display: flex;
     padding: 22px 1rem;
@@ -110,17 +109,17 @@
 }
 
 .proceed-to-checkout-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        border-radius: 8px;
-        height: 64px;
-        font-size: 20px;
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 400;
-        border: none;
-        cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    height: 64px;
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
     background-color: #FFD568;
     margin-top: 2rem;
 }
@@ -161,9 +160,9 @@
 }
 
 .movie-cover-cart {
-        width: 160px;
-        height: 224px;
-        border-radius: 0.5rem;
+    width: 160px;
+    height: 224px;
+    border-radius: 0.5rem;
 }
 
 .trash-remove-btn-cart {
@@ -253,9 +252,7 @@
     margin-left: .5rem;
 }
 
-
 /* FOOTER */
-
 .list {
     list-style: none;
 }
@@ -315,37 +312,11 @@
     color: #C2C2C2;
 }
 
-.language-selection {
-    display: flex;
-    margin-left: 44px;
-}
-
-.icon-globe {
-    height: 38px;
-    width: 38px;
-}
-
-.language-selection-english {
-    width: 97px;
-    height: 38px;
-    border: 2px solid #353535;
-    color: #BABABA;
-    background-color: rgba(40, 40, 40, 80);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 8px;
-    font-size: 20px;
-    font-weight: 300;
-}
-
 footer {
     background-color: #1C1C1C;
     padding-top: 68px;
 }
 
-/* Extra Extra Small (xxs) */
 @media (min-width: 430px) {
 
     .header-square-eyes {
@@ -372,7 +343,6 @@ footer {
     }
 }
 
-/* Extra Small (xs) */
 @media (min-width: 470px) {
     .logo {
         width: 160px;
@@ -380,7 +350,6 @@ footer {
     }
 }
 
-/* Medium (md) */
 @media (min-width: 768px) {
     .footer-logo-and-social-icons {
         display: flex;
@@ -415,7 +384,6 @@ footer {
     }
 }
 
-/* Large (lg) */
 @media (min-width: 1024px) {
     .line-divider-header {
         display: block;

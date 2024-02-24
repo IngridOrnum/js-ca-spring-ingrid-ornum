@@ -90,7 +90,6 @@ async function displayInCart() {
 // Call displayInCart when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     displayInCart();
-
 });
 cartDropdownContent.addEventListener('click', (event) => {
     if (event.target.classList.contains("trash-remove-btn-cart")) {

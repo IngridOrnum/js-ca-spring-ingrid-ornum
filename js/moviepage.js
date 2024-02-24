@@ -38,6 +38,10 @@ function fetchSingleMovie() {
             for (let i = 0; i < movies.length; i++) {
                 if (movies[i].id === movieId && movies[i].onSale === true) {
                     movieContainer.innerHTML = `
+            <div class="movie-page-bg-img">
+            <div class="layer-blur-movie-page"></div>
+            <img id="movie-cover-bg" alt="movie cover" src="${movies[i].image}">
+            </div>
                         <section class="movie-section">
                         <div class="movie-info-text">
             <h2 id="movie-heading">${movies[i].title}</h2>
@@ -75,6 +79,10 @@ function fetchSingleMovie() {
                 }
                 if (movies[i].id === movieId && movies[i].onSale === false) {
                     movieContainer.innerHTML = `
+            <div class="movie-page-bg-img">
+            <div class="layer-blur-movie-page"></div>
+            <img id="movie-cover-bg" alt="movie cover" src="${movies[i].image}">
+            </div>
             <section class="movie-section">
             <div class="movie-info-text">
             <h2 id="movie-heading">${movies[i].title}</h2>

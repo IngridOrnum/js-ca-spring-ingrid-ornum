@@ -52,7 +52,6 @@ async function displayWatchlist() {
         } catch (error) {
             console.error('Error fetching movie details:', error);
         }
-
         // append the movie div to the movie element
         movieElement.appendChild(movieDiv);
     }

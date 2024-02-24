@@ -27,13 +27,26 @@
 }
 
 .movie-page-bg-img {
-    background-size: 100%;
     height: 500px;
     width: 100%;
-    z-index: -1;
+    z-index: -10;
     position: absolute;
-    background-repeat: no-repeat;
     top: 76px;
+}
+
+#movie-cover-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+}
+
+.layer-blur-movie-page {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(360deg, rgba(19, 19, 19), rgba(75, 75, 75, 30%));
+    position: absolute;
 }
 
 #img-cover-mobile {
@@ -92,6 +105,11 @@
     gap: 10px;
 }
 
+.buttons-action-moviepage-desktop span {
+    font-weight: 300;
+    color: #FFE194;
+}
+
 #button-buy, #button-watchlist {
     display: flex;
     align-items: center;
@@ -118,21 +136,9 @@
     background-color: #FFE194;
 }
 
-
-/* Small (sm) */
 @media (min-width: 640px) {
-
     .movie-section {
         margin-bottom: 4rem;
-    }
-
-    .movie-page-bg-img {
-        background-size: 100%;
-        height: 500px;
-        width: 100%;
-        z-index: -1;
-        position: absolute;
-        background-repeat: no-repeat;
     }
 
     #movie-description {
@@ -172,14 +178,11 @@
     .movie-cover-and-buttons-desktop {
         position: absolute;
         right: 1rem;
-        top: 150px;
+        top: 115px;
     }
 }
 
-/* Medium (md) */
 @media (min-width: 768px) {
-
-
     #movie-heading, .movie-description {
         width: 542px;
     }
@@ -192,24 +195,20 @@
 }
 
 @media (min-width: 882px) {
-
     .main-movie-page {
         margin: 0 56px;
     }
 
-    #img-cover-desktop {
-        margin-right: 42px;
+    #img-cover-desktop, .buttons-action-moviepage-desktop {
+        width: 220px;
     }
 
-    .buttons-action-moviepage-desktop {
-        width: 185px;
-
+    .movie-cover-and-buttons-desktop {
+        top: 84px;
     }
 }
 
-/* Large (lg) */
 @media (min-width: 1024px) {
-
     #img-cover-desktop {
         height: auto;
         width: 220px;
@@ -232,9 +231,7 @@
     }
 }
 
-/* Extra Large (xl) */
 @media (min-width: 1280px) {
-
     .main-movie-page {
         margin: 0 78px;
     }
@@ -263,7 +260,6 @@
     }
 }
 
-/* 2XL (2xl) */
 @media (min-width: 1536px) {
 
     .main-movie-page {
