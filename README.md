@@ -49,9 +49,9 @@ be marked as if the coding was not done.
 
 ## Features
 The project features seven responsive pages. These are the following:
-- Homepage: animated hero/slider, all movies avaliable in the API, filter function (by genre).
-- Movie page: details about each movie clicked (fetched from the API), "add to cart" button, "add to watchlist" button. User is alerted when a movie is added twice using both "buy" button and "add to watchlist", and the user is alerted everytime a movie is added to watchlist.
-- Checkout page / cart dropdown: When clicking the "buy" button on the moviepage, the movie is added to (localstorage) both cart dropdown and checkoutpage. The user can only delete a movie through the cart dropdown. The user is redirected to the checkoutpage when clicking on the "proceed to checkout" button.
+- Homepage: An animated hero/slider with selected movie ids from the API, displaying all movies avaliable in the API (with image, title, release year) and filter function (filter by genre).
+- Movie page: Details about each movie which is clicked on the homepage (fetched from the API), "add to cart" button, "add to watchlist" button. User is alerted when a movie is added twice using both "buy" button and "add to watchlist", and the user is alerted everytime a movie is added to watchlist.
+- Checkout page / cart dropdown: When clicking the "buy" button on the moviepage, the movie is added to (localstorage) both cart dropdown and checkoutpage. The user can only delete a movie through the cart dropdown. The user is redirected to the checkoutpage when clicking on the "proceed to checkout" button in the cart.
 - Checkout success: A simple page where the user is directed to after comfirming the order in the checkout page. There is also a button to redirect the user back to the homepage.
 - About page: short description about the site.
 - Watchlist: On the moviepage the user can add to watchlist. The movies are added to (localstorage) my-watchlist.html.
@@ -72,7 +72,7 @@ The project features seven responsive pages. These are the following:
 - Unsplashed: I used free images from Unsplashed as a backup image in the hero slider at the homepage.
 - Fontawesome: Most of the icons used on the page is from [Fontawesome.](https://fontawesome.com/icons)
 - Notion: I used Notion, a web application for taking notes.
-- ChatGPT: I used chatGPT when stuck on bugs or if I want input to improve my code. I also used ChatGPT to generate text to pages "about" and "terms of service".
+- ChatGPT: I used chatGPT when stuck on bugs or if I want input on how to improve my code. I also used ChatGPT to generate text to the pages "about" and "terms of service".
 - YouTube: I used youtube for inspiration to resolve tasks.
 
 ### Deployment 
@@ -88,12 +88,12 @@ I used inspiration from a project I did earlier where we only used HTML and CSS,
 I used sourcetree to set up the project and create branches locally on my mac. While working on the code, I regularly committed changes and pushed to Github. When finished with a branch, I merged with the main branch and pulled the changes to the main branch locally on my computer using sourcetree.  
 
 ## Reflection
-I learned alot during this course assignment. I fount chatGPT to be a helpful tool, both with debugging code and understanding syntaxes more. I also worked alot at school where I had discussions with my peers, which was a big help during the assignment. I talked to my peers when I was stuck with a problem and I provided help to my peers with whatever I could.
+I learned alot during this course assignment. I found chatGPT to be a helpful tool, both with debugging code and understanding methods and syntaxes more. I also worked alot at school where I had discussions with my peers, which was a big help during the assignment. I talked to my peers when I was stuck with an issue and I provided help to my peers with whatever I could.
 
-I tried different approaches to similar problems when coding with JS, like using innerhtml in the js to create html content versus using "createElement" method. 
+I tried different approaches to similar problems when coding with JS, like using innerhtml in the js to create html content versus using "createElement" method. I think this was a great way to figure out what I found makes more sense to me and what i prefer using.
 
 I am not too happy with the design on all the pages, but because the design part and making the site responsive wasn't a requirement I gave myeself some slack.
 
-My HTML files are not named the exact same as in the course assignment sheet we were provided to the project. I figured this would not be a problem as long as the content fulfill the requirements.
+My HTML files are not named the exact same as in the course assignment sheet we were provided to the project. I figured this would not be a problem as long as the content on the pages fulfill the requirements.
 
 After this course I understand JS more and feel more comfortable using it, but along the way I also figured what I need to study more to understand. 
