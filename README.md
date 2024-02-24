@@ -61,7 +61,7 @@ The project features seven responsive pages. These are the following:
 ### Tech
 - HTML
 - CSS
-- Javascript: I used Javascript to create the burger menu in the header and dropdown content in the "about page".
+- Javascript
 
 ### Tools used
 - Figma: I used figma to design the project, both mobile and desktop. 
