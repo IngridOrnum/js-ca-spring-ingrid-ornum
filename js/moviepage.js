@@ -4,7 +4,6 @@ const movieId = searchParameter.get('id');
 const movieContainer = document.getElementById('movie-container');
 
 for (const parameter of searchParameter) {
-    console.log(parameter)
 }
 
 // // Add movie to watchlist
