@@ -46,12 +46,9 @@ async function displayMovieInSlider() {
         const movieDetails = await fetchMovieDetails(movieId);
         if (movieDetails) {
             const slide = slides[i];
-            const imgElement = slide.querySelector('.movie-image');
             const titleElement = slide.querySelector('.movie-title-hero');
             const descriptionElement = slide.querySelector('.p-text');
 
-            imgElement.src = movieDetails.image;
-            imgElement.alt = movieDetails.title;
             titleElement.textContent = movieDetails.title;
             descriptionElement.textContent = movieDetails.description;
         }
