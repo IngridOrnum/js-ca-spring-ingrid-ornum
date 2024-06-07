@@ -26,8 +26,6 @@ buttons.forEach(button => {
     })
 })
 
-// Display each movie in slider hero
-
 document.querySelectorAll('.src-movie-slider').forEach(form => {
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
@@ -71,9 +69,6 @@ async function displayMovieInSlider() {
 
 displayMovieInSlider();
 
-// CATEGORIES SECTION / FILTER FUNCTION
-
-// Fetch all movies
 async function fetchAllMovies() {
     loader.style.display = "block";
     try {
@@ -106,7 +101,6 @@ async function fetchAllMovies() {
 
 fetchAllMovies();
 
-// Filter
 async function filterMovies(filterParameter) {
     try {
         const getResponse = await fetch("https://api.noroff.dev/api/v1/square-eyes");

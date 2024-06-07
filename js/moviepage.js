@@ -6,27 +6,19 @@ const movieContainer = document.getElementById('movie-container');
 for (const parameter of searchParameter) {
 }
 
-// // Add movie to watchlist
 function addToWatchlist (movieId, movieTitle) {
-    // retrieve existing watchlist or create a new one
     let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
-    // Check if the movie is already in the watchlist
     if(!watchlist.some(movie => movie.id === movieId)) {
-        // Add the movie to the watchlist
         watchlist.push({id: movieId, title: movieTitle});
-
-        // Store the updated watchlist back in localstorage
         localStorage.setItem('watchlist', JSON.stringify(watchlist));
 
-        // Redirect to my my-watchlist.html
         alert('Movie added to your watchlist.')
     } else {
         alert('This movie is already added to your watchlist.')
     }
 }
 
-// Display movie that was clicked
 function fetchSingleMovie() {
     fetch("https://api.noroff.dev/api/v1/square-eyes")
         .then(function (getResponse) {
