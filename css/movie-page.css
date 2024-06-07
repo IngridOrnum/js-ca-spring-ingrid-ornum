@@ -17,7 +17,7 @@
 .movie-info-text {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
+    margin: 4rem 22px;
 }
 
 #movie-description {
@@ -102,6 +102,7 @@
 .buttons-action-moviepage-mobile, .buttons-action-moviepage-desktop {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
@@ -204,7 +205,7 @@
     }
 
     .movie-cover-and-buttons-desktop {
-        top: 84px;
+        top: 120px;
     }
 }
 
