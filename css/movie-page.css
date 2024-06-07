@@ -1,3 +1,4 @@
+
 .line-divider {
     background-color: #FFD568;
     width: 1px;
@@ -17,7 +18,7 @@
 .movie-info-text {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
+    margin: 4rem 22px;
 }
 
 #movie-description {
@@ -54,8 +55,8 @@
     height: auto;
     border-radius: 8px;
     position: absolute;
-    right: 16px;
-    top: 156px;
+    right: 38px;
+    top: 280px;
 }
 
 #img-cover-desktop {
@@ -102,6 +103,7 @@
 .buttons-action-moviepage-mobile, .buttons-action-moviepage-desktop {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
@@ -204,7 +206,7 @@
     }
 
     .movie-cover-and-buttons-desktop {
-        top: 84px;
+        top: 120px;
     }
 }
 

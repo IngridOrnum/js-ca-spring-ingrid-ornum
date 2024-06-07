@@ -5,7 +5,7 @@ const loader = document.querySelector('.loader');
 const movieSliderId = [
     "6c8fbbac-b0b7-42d9-a01b-cce95c99bdee",
     "04fd79ad-2612-4dab-b2ee-1320c4e5ccd1",
-    "d5c5c3e0-07da-406a-b3db-8336c40c5ae7"
+    "f40421d4-0977-4a78-8e47-bacd7a188381"
 ]
 
 // Movie slides
@@ -26,7 +26,12 @@ buttons.forEach(button => {
     })
 })
 
-// Display each movie in slider hero
+document.querySelectorAll('.src-movie-slider').forEach(form => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        window.location.href = this.action; // Manually redirect to the form's action URL
+    });
+});
 
 async function fetchMovieDetails(movieId) {
     try {
@@ -46,23 +51,24 @@ async function displayMovieInSlider() {
         const movieDetails = await fetchMovieDetails(movieId);
         if (movieDetails) {
             const slide = slides[i];
-            const imgElement = slide.querySelector('.movie-image');
             const titleElement = slide.querySelector('.movie-title-hero');
             const descriptionElement = slide.querySelector('.p-text');
+            const srcMovie = slide.querySelector('.src-movie-slider');
 
-            imgElement.src = movieDetails.image;
-            imgElement.alt = movieDetails.title;
-            titleElement.textContent = movieDetails.title;
-            descriptionElement.textContent = movieDetails.description;
+            if (titleElement && descriptionElement && srcMovie) {
+                titleElement.textContent = movieDetails.title;
+                descriptionElement.textContent = movieDetails.description;
+                srcMovie.action = `movie-page.html?id=${movieId}`;
+                console.log(`Set action for form in slide ${i}:`, srcMovie.action);
+            } else {
+                console.error('One of the elements is missing in slide', slide);
+            }
         }
     }
 }
 
 displayMovieInSlider();
 
-// CATEGORIES SECTION / FILTER FUNCTION
-
-// Fetch all movies
 async function fetchAllMovies() {
     loader.style.display = "block";
     try {
@@ -95,7 +101,6 @@ async function fetchAllMovies() {
 
 fetchAllMovies();
 
-// Filter
 async function filterMovies(filterParameter) {
     try {
         const getResponse = await fetch("https://api.noroff.dev/api/v1/square-eyes");
@@ -117,7 +122,7 @@ async function filterMovies(filterParameter) {
     }
 }
 
-filterSelect.addEventListener('change', function() {
+filterSelect.addEventListener('change', function () {
     if (filterSelect.value === "View all movies") {
         fetchAllMovies();
     } else {
