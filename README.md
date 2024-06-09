@@ -1,24 +1,22 @@
-# JS1 Course Assignment - Spring 2024
-This is the first JavaScript course assignment in Front End Development at Noroff School of Technology.
+# Square Eyes - JS1 Course Assignment
+Square Eyes is a fictional movie streaming website, where the user can buy and read detailed information about movies. The website is an API-driven application focused on intriguing the user to buy movies. The user can add movies to watchlist or to cart, which then automatically is updated. The user can also proceed to checkout where all the movies added to cart and the collected price is viewed. The movies displayed are the movies avaliable in the API provided by Noroff.
 
-My project is deployed on Vercel. [Click here to go to the project.](https://js-ca-spring-ingrid-ornum.vercel.app/)
+This is my first JavaScript course assignment while studying Front-end Development at Noroff School of Technology and Digital Media.
 
 ## Table of contents:
-- [Requirements](#requirements)
-- [Features](#features)
-- [Technical specifications](#technical-specifications)
-  - [Tech](#tech)
-  - [Tools used](#tools-used)
-  - [Deployment](#deployment)
-- [Process](#process)
-  - [Design process](#design-process)
-  - [Production process](#production-process)
-- [Reflection](#reflection)
+* [Installation and Project Links](#installation-and-project-links)
+* [Requirements](#requirements)
+* [Features](#features)
+* [Technical specifications](#technical-specifications)
+* [Challenges](#challenges)
+- [Licence](#licence)
+
+## Installation and Project Links
+My project is deployed on Vercel. [Click here to go to the project.](https://js-ca-spring-ingrid-ornum.vercel.app/) <br/>
+GitHub Repo: [Project Repo](https://github.com/IngridOrnum/js-ca-spring-ingrid-ornum)
 
 ## Requirements
 The semester project have the following requirements:
-
-1. Fulfill user stories:
 - As a user, I want to view a list of products on the homepage.
 - As a user, I want to filter products by category, gender or genre.
 - As a user, I want to view a single product page with more detail.
@@ -27,25 +25,11 @@ The semester project have the following requirements:
 - As a user, I want to view a summary of my cart on the checkout page.
 - As a user, I want to view an order-confirmation screen after checking out.
 
-2. Required pages:
-- Home Page containing product list `/index.html`
-- Product Page showing all details of a specific product `/product/index.html`
-- Checkout Page showing all items in the basket `/checkout/index.html`
-- Confirmation Page showing a thank you message `/checkout/confirmation/index.html`
-
-Important features:   
-This list is a non-exhaustive list of important things to keep in mind before delivery:
-
-* Errors should be handled for the user, such that they are alerted when something
-goes wrong like an API call.
-* A loading indicator should be shown to the user whenever they are waiting for an
-asynchronous action to finish.
-* There should be no hardcoded product data in your final submission.
-* Although the focus on marking is on JavaScript, the site still needs to be accessible
-and usable for the user. If we cannot access functionality that has been coded, it will
-be marked as if the coding was not done.
-* Use `async` instead of `then` syntax for asynchronous actions.
-* Remove all console.log statements before delivery.
+Required pages:
+- Home Page containing product list
+- Product Page showing all details of a specific product
+- Checkout Page showing all items in the basket
+- Confirmation Page
 
 ## Features
 The project features seven responsive pages. These are the following:
@@ -60,11 +44,9 @@ The project features seven responsive pages. These are the following:
 ## Technical specifications
 
 ### Tech
-- HTML
-- CSS
-- Javascript
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
 
-### Tools used
+### Tools
 - Figma: I used figma to design the project, both mobile and desktop. 
 - Webstorm: the code editing software I used.
 - Github: I github board to keep a structured work flow. I also used Github to commit and merge to main branch.
@@ -74,26 +56,16 @@ The project features seven responsive pages. These are the following:
 - Notion: I used Notion, a web application for taking notes.
 - ChatGPT: I used chatGPT when stuck on bugs or if I want input on how to improve my code. I also used ChatGPT to generate text to the pages "about" and "terms of service".
 - YouTube: I used youtube for inspiration to resolve tasks.
-
-### Deployment 
-I used Vercel to deploy my project. [Click here to go to the project.](https://js-ca-spring-ingrid-ornum.vercel.app/index.html)
   
-## Process
-The process of planning the project started in Notion and github board because I already was familiar with these tools.
+## Challenges
 
-### Design process
-I used inspiration from a project I did earlier where we only used HTML and CSS, but did some adjustments to make it work with this assignment.
-
-### Production process
-I used sourcetree to set up the project and create branches locally on my mac. While working on the code, I regularly committed changes and pushed to Github. When finished with a branch, I merged with the main branch and pulled the changes to the main branch locally on my computer using sourcetree.  
-
-## Reflection
 I learned alot during this course assignment. I found chatGPT to be a helpful tool, both with debugging code and understanding methods and syntaxes more. I also worked alot at school where I had discussions with my peers, which was a big help during the assignment. I talked to my peers when I was stuck with an issue and I provided help to my peers with whatever I could.
 
 I tried different approaches to similar problems when coding with JS, like using innerhtml in the js to create html content versus using "createElement" method. I think this was a great way to figure out what I found makes more sense to me and what i prefer using.
 
-I am not too happy with the design on all the pages, but because the design part and making the site responsive wasn't a requirement I gave myeself some slack.
-
 My HTML files are not named the exact same as in the course assignment sheet we were provided to the project. I figured this would not be a problem as long as the content on the pages fulfill the requirements.
 
 After this course I understand JS more and feel more comfortable using it, but along the way I also figured what I need to study more to understand. 
+
+## Licence
+This project is licenced under the MIT Licence.
