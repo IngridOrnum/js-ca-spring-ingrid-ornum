@@ -1,19 +1,15 @@
 const cartDropdownContent = document.getElementById('cart-dropdown');
 const closeCartBtn = document.getElementById('cart-close-btn');
-
-// dropdown cart
 function cartDropdown() {
     cartDropdownContent.style.display = "block";
 }
 
-// close dropdown cart
 closeCartBtn.addEventListener("click", closeCartDropdown);
 
 function closeCartDropdown() {
     document.getElementById("cart-dropdown").style.display = "none";
 }
 
-// Add movie to cart
 function addToCart(movieId, movieTitle) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -92,6 +88,3 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cart));
     displayInCart();
 }
-
-
-
