@@ -8,7 +8,6 @@ const movieSliderId = [
     "f40421d4-0977-4a78-8e47-bacd7a188381"
 ]
 
-// Movie slides
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const offset = button.dataset.carouselButton === "next" ? 1 : -1
@@ -28,8 +27,8 @@ buttons.forEach(button => {
 
 document.querySelectorAll('.src-movie-slider').forEach(form => {
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
-        window.location.href = this.action; // Manually redirect to the form's action URL
+        event.preventDefault();
+        window.location.href = this.action;
     });
 });
 
