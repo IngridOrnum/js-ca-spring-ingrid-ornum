@@ -9,7 +9,7 @@ This is my first JavaScript course assignment while studying Front-end Developme
 * [Features](#features)
 * [Technical specifications](#technical-specifications)
 * [Challenges](#challenges)
-- [Licence](#licence)
+* [Licence](#licence)
 
 ## Installation and Project Links
 My project is deployed on Vercel. [Click here to go to the project.](https://js-ca-spring-ingrid-ornum.vercel.app/) <br/>
@@ -58,12 +58,7 @@ The project features seven responsive pages. These are the following:
 - YouTube: I used youtube for inspiration to resolve tasks.
   
 ## Challenges
-
-I learned alot during this course assignment. I found chatGPT to be a helpful tool, both with debugging code and understanding methods and syntaxes more. I also worked alot at school where I had discussions with my peers, which was a big help during the assignment. I talked to my peers when I was stuck with an issue and I provided help to my peers with whatever I could.
-
 I tried different approaches to similar problems when coding with JS, like using innerhtml in the js to create html content versus using "createElement" method. I think this was a great way to figure out what I found makes more sense to me and what i prefer using.
-
-My HTML files are not named the exact same as in the course assignment sheet we were provided to the project. I figured this would not be a problem as long as the content on the pages fulfill the requirements.
 
 After this course I understand JS more and feel more comfortable using it, but along the way I also figured what I need to study more to understand. 
 
